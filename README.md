@@ -29,9 +29,10 @@ you can add them into the command line parameters, like
 
 ### Example Command Output
 
-<img>6E8E0026-2A52-47A1-89D4-EC8BE1A4CDE3.png</img>
+(https://github.com/w3ctk/RunRMS/raw/main/6E8E0026-2A52-47A1-89D4-EC8BE1A4CDE3.png)
 
-<code>========= CHECKING PROGRAM PARAMETERS =====================
+<code>
+========= CHECKING PROGRAM PARAMETERS =====================
 ========= PARAMETERS FOR LOGGING ==========================
 LogFile:              RunRMS.log
 EventLogger:          True
