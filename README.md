@@ -29,7 +29,7 @@ you can add them into the command line parameters, like
 
 ### Example Command Output
 
-(https://github.com/w3ctk/RunRMS/raw/main/6E8E0026-2A52-47A1-89D4-EC8BE1A4CDE3.png)
+![Screen Shot of RunRMS](https://github.com/w3ctk/RunRMS/raw/main/6E8E0026-2A52-47A1-89D4-EC8BE1A4CDE3.png)
 
 <code>
 ========= CHECKING PROGRAM PARAMETERS =====================
