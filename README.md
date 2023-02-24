@@ -5,21 +5,29 @@ https://github.com/w3ctk/RunRMS
 
 This is a script to check and run the various RMS sysop processes on Windows
 
+## Running
+
 To run, you can launch Windows PowerShell and run the command from 
 the directory you downloaded the RunRMS.ps1 script into:
 
 <code>./runrms</code>
 
+## PowerShell
+
 You can download PowerShell for Windows here if it isn't already installed:
 
 https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows
+
+## Script Setup and Parameters
 
 All of the allowed parameters are set in the script, and these are
 displayed when the script is run.  To override any of these settings,
 you can add them into the command line parameters, like
 
+### Example Command Line Parameters
 <code>./runrms -RMSPacketDirectory "C:\RMS Packet\" -RestartRMSPacket $True -LogFileEmail $True</code>
 
+### Example Command Output
 <code>
 ========= CHECKING PROGRAM PARAMETERS =====================
 ========= PARAMETERS FOR LOGGING ==========================
