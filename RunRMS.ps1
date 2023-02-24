@@ -37,7 +37,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 
 .PROJECTURI     
 
-https://github.com/chris4gl/RunRMS 
+https://github.com/w3ctk/RunRMS 
 
 .ICONURI
 
@@ -58,7 +58,7 @@ https://github.com/chris4gl/RunRMS
 
 .DESCRIPTION 
 
-https://github.com/chris4gl/RunRMS
+https://github.com/w3ctk/RunRMS
 
 This is a script to check and run the various RMS sysop processes on Windows
 
