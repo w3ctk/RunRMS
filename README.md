@@ -28,8 +28,10 @@ you can add them into the command line parameters, like
 <code>./runrms -RMSPacketDirectory "C:\RMS Packet\" -RestartRMSPacket $True -LogFileEmail $True</code>
 
 ### Example Command Output
-<code>
-========= CHECKING PROGRAM PARAMETERS =====================
+
+<img>6E8E0026-2A52-47A1-89D4-EC8BE1A4CDE3.png</img>
+
+<code>========= CHECKING PROGRAM PARAMETERS =====================
 ========= PARAMETERS FOR LOGGING ==========================
 LogFile:              RunRMS.log
 EventLogger:          True
