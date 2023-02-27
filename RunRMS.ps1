@@ -1,6 +1,6 @@
 <#PSScriptInfo
 
-.VERSION 23.02.23
+.VERSION 23.02.26
 
 .GUID b33d6589-1851-4759-bdfb-241f0e44db33
 
@@ -34,7 +34,6 @@ limitations under the License.
 
 http://www.apache.org/licenses/LICENSE-2.0
 
-
 .PROJECTURI     
 
 https://github.com/w3ctk/RunRMS 
@@ -43,12 +42,15 @@ https://github.com/w3ctk/RunRMS
 
 .EXTERNALMODULEDEPENDENCIES 
 
+AudioDeviceCmdlets
+
 .REQUIREDSCRIPTS
 
 .EXTERNALSCRIPTDEPENDENCIES
 
 .RELEASENOTES
 
+23.02.26 - Added function to load and install required modules when needed
 
 .PRIVATEDATA
 
@@ -612,9 +614,33 @@ function Get-INI-Settings() {
     }
 }
 
+function Load-Module ($m) {
+    # If module is imported do nothing
+    if (Get-Module | Where-Object {$_.Name -eq $m}) {
+    }
+    else {
+        # If module is not imported, but available on disk then import
+        if (Get-Module -ListAvailable | Where-Object {$_.Name -eq $m}) {
+            Import-Module $m -Verbose
+        }
+        else {
+            # If module is not imported, not available on disk
+            # but is in online gallery then install and import
+            if (Find-Module -Name $m | Where-Object {$_.Name -eq $m}) {
+                Install-Module -Name $m -Force -Verbose -Scope CurrentUser
+                Import-Module $m -Verbose
+            }
+            else {
+                # If the module is not imported, not available and not in the online gallery
+                write-host "WARNING: Module $m not imported, not available and not in an online gallery, exiting."
+            }
+        }
+    }
+}
+
 # Function to import modules needed for script
 function Import-Modules() {
-
+	Load-Module ("AudioDeviceCmdlets")
 }
 
 # Function to create a new Windows Event Log entry
