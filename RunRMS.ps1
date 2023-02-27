@@ -621,18 +621,18 @@ function Load-Module ($m) {
     else {
         # If module is not imported, but available on disk then import
         if (Get-Module -ListAvailable | Where-Object {$_.Name -eq $m}) {
-            Import-Module $m -Verbose
+            Import-Module $m
         }
         else {
             # If module is not imported, not available on disk
             # but is in online gallery then install and import
             if (Find-Module -Name $m | Where-Object {$_.Name -eq $m}) {
-                Install-Module -Name $m -Force -Verbose -Scope CurrentUser
-                Import-Module $m -Verbose
+                Install-Module -Name $m -Force -Scope CurrentUser
+                Import-Module $m
             }
             else {
                 # If the module is not imported, not available and not in the online gallery
-                write-host "WARNING: Module $m not imported, not available and not in an online gallery, exiting."
+                write-host "WARNING: Module $m not imported, not available and not in an online gallery."
             }
         }
     }
